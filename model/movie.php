@@ -18,14 +18,14 @@ class Movie
     }
 }
 
-$movieString = file_get_contents(__DIR__."model/movie_db.json");
+$movieString = file_get_contents(__DIR__."/movie_db.json");
 $movieList = json_decode($movieString, true);
 
 $movies = [];
-
 foreach ($movieList as $item){
-    $movies[]= new Movie ($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['posted_path']);
+    $movies[] = new Movie ($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['posted_path']);
 }
+
 var_dump($movies);
 
 ?>
