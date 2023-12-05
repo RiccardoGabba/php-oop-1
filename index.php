@@ -2,10 +2,26 @@
 include __DIR__ . "/structure/header.php";
 ?>
 
-<section class="container">
-    <h2>Movies</h2>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<?php
-include __DIR__ . "/structure/footer.php";
-?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="container">
+        <h2>Movie</h2>
+        
+        <a href="book.php">Book</a>
+    </section>
+
+    <?php
+    include __DIR__ . "/structure/footer.php";
+    ?>
+</body>
+
+</html>
