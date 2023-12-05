@@ -19,8 +19,8 @@ class Movie
 
     public function printCard(){
 
-        $image = $this-> posted_path;
-        $title = $this-> title;
+        $image = $this->posted_path;
+        $title = $this->title;
         $content = $this->overview;
         $custom = $this->vote_average; 
         
@@ -33,7 +33,7 @@ $movieList = json_decode($movieString, true);
 
 $movies = [];
 foreach ($movieList as $item){
-    $movies[] = new Movie ($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['posted_path']);
+    $movies[] = new Movie ($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['poster_path']);
 }
 
 // var_dump($movies);
