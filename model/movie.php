@@ -16,6 +16,16 @@ class Movie
         $this->posted_path = $posted_path;
         
     }
+
+    public function printCard(){
+
+        $image = $this-> posted_path;
+        $title = $this-> title;
+        $content = $this->overview;
+        $custom = $this->vote_average; 
+        
+        include __DIR__ ."/../views/card.php";
+    }
 }
 
 $movieString = file_get_contents(__DIR__."/movie_db.json");
@@ -26,7 +36,7 @@ foreach ($movieList as $item){
     $movies[] = new Movie ($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['posted_path']);
 }
 
-var_dump($movies);
-
+// var_dump($movies);
+// var_dump($movies[0]->title);
 ?>
 
