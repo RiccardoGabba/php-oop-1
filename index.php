@@ -1,5 +1,6 @@
 <?php
 include __DIR__ . "/structure/header.php";
+include __DIR__ . "/model/movie.php";
 ?>
 
 <!DOCTYPE html>
