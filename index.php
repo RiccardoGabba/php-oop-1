@@ -1,6 +1,6 @@
 <?php
-include __DIR__ . "/structure/header.php";
-include __DIR__ . "/model/movie.php";
+include __DIR__."/structure/header.php";
+include __DIR__."/model/movie.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,9 @@ include __DIR__ . "/model/movie.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   
     <title>Document</title>
 </head>
 
@@ -19,13 +21,10 @@ include __DIR__ . "/model/movie.php";
         <h2>Movie</h2>
 
         <div class="row">
-            <?php foreach ($movies as $movie) {
+            <?php foreach($movies as $movie) {
 
                 $movie->printCard();
-                $movie->sconto = rand(5, 20);
-                echo $movie->sconto. '%';
 
-                
 
             } ?>
         </div>
@@ -34,7 +33,7 @@ include __DIR__ . "/model/movie.php";
     </section>
 
     <?php
-    include __DIR__ . "/structure/footer.php";
+    include __DIR__."/structure/footer.php";
     ?>
 </body>
 
