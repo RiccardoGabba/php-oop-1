@@ -12,7 +12,7 @@
 
 <body>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 ">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +27,10 @@
                         <a class="nav-link" href="book.php">Book</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"></a>
+                        <a class="nav-link" href="#">Steam</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Steam</a>
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Unbeliveble Feature!</a>
                     </li>
                 </ul>
             </div>

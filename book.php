@@ -1,7 +1,21 @@
+<?php
+include __DIR__."/views/header.php";
+include __DIR__."/model/Book.php";
+$books = Book::fetchAll(); 
+?>
 
-<link rel="stylesheet" href="../css/style.css">
-<h2>book</h2>
+    <section class="container">
+        <h2>Books</h2>
 
-<a href="index.php">Back</a>
+        <div class="row">
+            <?php foreach($books as $book) {
+                $book->printBooks();
+            } ?>
+            
+        </div>
 
-<a href="https://www.youtube.com/watch?v=RvY5ploo1OI&ab_channel=Honduregno%F0%9F%87%AD%F0%9F%87%B3">let's go back</a>
+    </section>
+
+
+
+
