@@ -1,8 +1,8 @@
 <?php 
 class Product{
-    public float $price;
+    protected float $price;
     public int $sconto = 0;
-    public int $quantity;
+    protected int $quantity;
 
     public function __construct($price, $quantity){
         $this->price = $price;

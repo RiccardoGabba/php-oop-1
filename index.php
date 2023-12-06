@@ -20,9 +20,12 @@ include __DIR__ . "/model/movie.php";
 
         <div class="row">
             <?php foreach ($movies as $movie) {
+
                 $movie->printCard();
-                $movie->sconto;
+                $movie->sconto = rand(5, 20);
                 echo $movie->sconto. '%';
+
+                
 
             } ?>
         </div>

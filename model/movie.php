@@ -10,12 +10,14 @@ class Movie extends Product {
 
 
 
-    function __construct($id, $title, $overview, $vote_average, $posted_path) {
+    function __construct($id, $title, $overview, $vote_average, $posted_path, $quantity, $price) {
+        parent::__construct($price, $quantity);
         $this->id = $id;
         $this->title = $title;
         $this->overview = $overview;
         $this->vote_average = $vote_average;
         $this->posted_path = $posted_path;
+        
 
     }
 
@@ -34,6 +36,8 @@ class Movie extends Product {
         $title = $this->title;
         $content = $this->overview;
         $custom = $this->printStars();
+        $price = $this->price;
+        $quantity = $this->quantity;
 
         include __DIR__."/../views/card.php";
     }
@@ -42,12 +46,11 @@ class Movie extends Product {
 $movieString = file_get_contents(__DIR__."/movie_db.json");
 $movieList = json_decode($movieString, true);
 
-$quantity= 10;
-$price = 10;
+
 
 $movies = [];
 foreach($movieList as $item) {
-    $movies[] = new Movie($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['poster_path']);
+    $movies[] = new Movie($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['poster_path' ], $quantity, $price);
 }
 
 // var_dump($movies);
