@@ -12,9 +12,10 @@
                 <div class="d-flex justify-content-between align-items-flex-start">
                     <?= $custom ?>
                     <div>
-                        <?php $quantity ?>
-                        <?php $price ?>
-
+                        <?php echo $quantity ?>
+                        <?php echo $movie->sconto.'Quantità'; ?>
+                        <?php echo $price ?>
+                        <?php echo $movie->sconto.'$'; ?>
                     </div>
                 </div>
             </div>

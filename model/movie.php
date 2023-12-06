@@ -50,6 +50,10 @@ $movieList = json_decode($movieString, true);
 
 $movies = [];
 foreach($movieList as $item) {
+    $quantity = rand(0, 10);
+    $price = rand(10, 50);
+    
+    
     $movies[] = new Movie($item['id'], $item['title'], $item['overview'], $item['vote_average'], $item['poster_path' ], $quantity, $price);
 }
 
