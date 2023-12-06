@@ -1,12 +1,15 @@
 <?php 
 
-class Movie
+include __DIR__ .'/product.php';
+class Movie extends Product
 {
     public $id;
     public $title;
     public $overview;
     public $vote_average;
     public $posted_path;
+
+    
 
     function __construct($id, $title, $overview, $vote_average, $posted_path){
         $this->id = $id;
@@ -17,12 +20,21 @@ class Movie
         
     }
 
+    function printStars(){
+        $vote = ceil($this->vote_average / 2);
+        $template = "<p class='m-0'>";
+        for($n = 1; $n <= 5; $n++){
+            $template .= $n <= $vote ? '<i class="fa-solid text-warning fa-star"></i>' : '<i class="fa-regular text-warning fa-star"></i>';
+        }
+        $template .= "</p>";
+        return $template;
+    }
     public function printCard(){
 
         $image = $this->posted_path;
         $title = $this->title;
         $content = $this->overview;
-        $custom = $this->vote_average; 
+        $custom = $this->printStars(); 
         
         include __DIR__ ."/../views/card.php";
     }
